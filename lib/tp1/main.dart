@@ -1,12 +1,12 @@
-import 'package:cours_flutter/tp1/Matiere.dart';
+import 'package:cours_flutter/tp1/matiere.dart';
 
-const int DECIMALS = 1;
+const int decimals = 1;
 
 void main() {
-  matieres.forEach((matiere) {
-    print("La moyenne en ${matiere.name} est de ${matiere.average().toStringAsFixed(DECIMALS)}");
-  });
-  print("La moyène générale des matières est de ${Matiere.getAverage(matieres).toStringAsFixed(DECIMALS)}");
+  for (var matiere in matieres) {
+    print("La moyenne en ${matiere.name} est de ${matiere.average().toStringAsFixed(decimals)}");
+  }
+  print("La moyène générale des matières est de ${Matiere.getAverage(matieres).toStringAsFixed(decimals)}");
 }
 
 var french = Matiere([10, 12, 15, 18, 9, 9, 8, 11, 13, 2, 14], "Français");

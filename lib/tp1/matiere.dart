@@ -6,18 +6,14 @@ class Matiere {
   Matiere(this.notes, this.name);
 
   double average() {
-    double avg = 0;
-    notes.forEach((note) {
-      avg += note;
-    });
-    return avg / notes.length;
+    return notes.reduce((a,b) => a+b) / notes.length;
   }
 
   static double getAverage(List<Matiere> matieres) {
     double avg = 0;
-    matieres.forEach((matiere) {
+    for (var matiere in matieres) {
       avg += matiere.average();
-    });
+    }
     return avg / matieres.length;
   }
 }
